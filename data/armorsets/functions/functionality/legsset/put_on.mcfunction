@@ -15,7 +15,7 @@ data modify storage armorsets:data current_set set from entity @s Inventory[{Slo
 
 tag @s remove armorsets.conflicting_slots.true
 execute if function armorsets:functionality/slot_data/check_conflicting_slots run tag @s add armorsets.conflicting_slots.true
-execute if entity @s[tag=armorsets.conflicting_slots.true] run function armorsets:functionality/leggset/reject
+execute if entity @s[tag=armorsets.conflicting_slots.true] run function armorsets:functionality/legsset/reject
 execute if entity @s[tag=armorsets.conflicting_slots.true] run return 0
 
 tag @s add armorsets.legs_equipped

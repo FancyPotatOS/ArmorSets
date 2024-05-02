@@ -1,36 +1,179 @@
 
 
-Tags:
 
-armorsets.head_equipped
-armorsets.chest_equipped
-armorsets.legs_equipped
-armorsets.feet_equipped
-    (Whether the item in that slot current is the base item)
-
-armorsets.head_equipped_minor
-armorsets.chest_equipped_minor
-armorsets.legs_equipped_minor
-armorsets.feet_equipped_minor
-    (Whether the item in that slot current is a minor item in a set)
+        #### To Create An Armor Set ####
 
 
-Armor Set NBT Format:
+1.     First, ensure the item has the 'armorsets' compound
 
-(Base): armorsets
+/give @s diamond_chestplate{armorsets:{}}
+
+
+2.     Then set the NBT of 'armorsets.type' to "major"
+
+/give @s diamond_chestplate{armorsets:{type:"major"}}
+
+
+3.     Set the NBT of 'armorsets.set_id' to a unique number (At the very least, a unique number from all other items of that slot)
+
+(For example, no armor sets that extend from diamond_boots should share a set_id)
+
+/give @s diamond_chestplate{armorsets:{type:"major",set_id:123456}}
+
+For the sake of clarity, I'm not going to give the /give command until the end, but am going to display the formatted NBT to make it easier to read
 {
-    type: STRING ("major" or "minor")
-    set_id: INT (ID of the unique set, to distinguish if swapping with another set)
-    replacements: (Slots and their respective items in the set)
+    armorsets:
     {
-        head/chest/legs/feet: (The particular slot)
+        type: "major",
+        set_id: 123456
+    }
+}
+
+
+4.     Now we define all the items in the armor set by setting 'armorsets.replacements.*'
+{
+    armorsets:
+    {
+        type: "major",
+        set_id: 123456,
+        replacements:
         {
-            (item NBT)
-            id: STRING,
-            tag: {...}
+            head: 
+            {
+                id:"minecraft:glass"
+            }
         }
     }
 }
+
+The important takeaway is the the slots that can be set are as follows: head, chest, legs, and feet.
+
+Here is an armorset with a glass head, with some prettier text on it:
+{
+    armorsets:
+    {
+        type: "major",
+        set_id: 123456,
+        replacements:
+        {
+            head: 
+            {
+                id:"minecraft:glass",
+                tag:
+                {
+                    display:
+                    {
+                        Name: '["",{"text":"Helmet","color":"aqua"}]',
+                        Lore:
+                        [
+                            '["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]'
+                        ]
+                    },
+                    HideFlags:63
+                }
+            }
+        }
+    }
+}
+
+That is it! Here is the full /give command for the example. (Must be put into a command block due to its length)
+/give @p diamond_chestplate{armorsets:{type: "major",set_id: 123456,replacements:{head: {id:"minecraft:glass",tag:{display:{Name:'["",{"text":"Helmet","color":"aqua"}]',Lore:['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']},Unbreakable:1,HideFlags:63}}}}}
+
+
+Now, here is a full spacesuit:
+{
+    display:
+    {
+        Name:'["",{"text":"Spacesuit","italic":false,"color":"dark_purple","bold":true}]',
+        Lore:
+        [
+            '["",{"text":"The complete \'Spacesuit\' armorset","color":"gray"}]'
+        ]
+    },
+    HideFlags:63,
+    armorsets:
+    {
+        type: "major",
+        set_id: 123456,
+        replacements:
+        {
+            head: 
+            {
+                id:"minecraft:glass",
+                tag:
+                {
+                    display:
+                    {
+                        Name:'["",{"text":"Helmet","color":"aqua"}]',
+                        Lore:
+                        [
+                            '["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]'
+                            ]
+                        },
+                    HideFlags:63
+                }
+            },
+            legs: 
+            {
+                id:"minecraft:iron_leggings",
+                tag:
+                {
+                    display:
+                    {
+                        Name:'["",{"text":"Lower Torse Assembly","color":"aqua"}]',
+                        Lore:
+                        [
+                            '["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]'
+                            ]
+                        },
+                    HideFlags:63
+                }
+            },
+            feet: 
+            {
+                id:"minecraft:iron_boots",
+                tag:
+                {
+                    display:
+                    {
+                        Name:'["",{"text":"Spacesuit Overshoe","color":"aqua"}]',
+                        Lore:
+                        [
+                            '["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]'
+                            ]
+                        },
+                    HideFlags:63
+                }
+            }
+        }
+    }
+}
+
+And its give command:
+/give @p iron_chestplate{display:{Name:'["",{"text":"Spacesuit","italic":false,"color":"dark_purple","bold":true}]',Lore:['["",{"text":"The complete \'Spacesuit\' armorset","color":"gray"}]']},HideFlags:63,armorsets:{type: "major",set_id: 123456,replacements:{head: {id:"minecraft:glass",tag:{display:{Name:'["",{"text":"Helmet","color":"aqua"}]',Lore:['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']},HideFlags:63}},legs: {id:"minecraft:iron_leggings",tag:{display:{Name:'["",{"text":"Lower Torse Assembly","color":"aqua"}]',Lore:['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']},HideFlags:63}},feet: {id:"minecraft:iron_boots",tag:{display:{Name:'["",{"text":"Spacesuit Overshoe","color":"aqua"}]',Lore:['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']},HideFlags:63}}}}}
+
+
+
+
+        #### Some Extra Reading ####
+
+By default, every armorset item except the base will have the 'Unbreakable' tag, Curse of Vanishing, and Curse of Binding.
+
+These can be ignored by setting:
+    'armorsets.replacements.*.override_unbreakable:1b'
+    'armorsets.replacements.*.override_vanishing:1b'
+    'armorsets.replacements.*.override_binding:1b'
+respectively.
+
+Do be warned: there is currently no functionality for keeping data in the minor pieces of the armor set every time you put it on, so if the
+    unbreakable tag is removed, then taking off and putting back on an armor set will 'refresh' the durability of the minor items.
+
+
+
+Also, there is a client/serverside (desync?) where if you are in creative mode, then putting on armorsets manually may leave behind/not apply
+    some minor items. This isn't in my control, I think it's a bug. This doesn't happen in other game modes though.
+
+
 
 
 

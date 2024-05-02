@@ -7,11 +7,13 @@
 #
 
 
+function armorsets:functionality/slot_data/clear_vanilla_item/head
+
 data modify storage armorsets:data item set from storage armorsets:data current_set.replacements.head
 
-tellraw @p {"nbt":"item","storage":"armorsets:data"}
+#tellraw @p {"nbt":"item","storage":"armorsets:data"}
 
-summon armor_stand ~ ~ ~ {Tags:["armorsets.armor_stand.temp"]}
+summon armor_stand ~ ~ ~ {Tags:["armorsets.armor_stand.temp"],Invisible:1b}
 
 item replace entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] weapon.mainhand with wooden_hoe
 data modify entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] HandItems[0] merge from storage armorsets:data item
@@ -26,18 +28,3 @@ item modify entity @s armor.head armorsets:item_storage/add_minor
 
 kill @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1]
 
-return 0
-## OLD functionality
-
-data modify storage armorsets:data input set value {}
-
-
-# Set particular item
-data modify storage armorsets:data input.slot set value "head"
-data modify storage armorsets:data input.item set from storage armorsets:data current_set.replacements.head.id
-function armorsets:functionality/slot_data/apply_item/apply_to_slot with storage armorsets:data input
-
-data modify storage armorsets:data item set from storage armorsets:data current_set.replacements.head
-
-# Move over the data
-item modify entity @s armor.head armorsets:item_storage/item_to_item

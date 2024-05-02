@@ -20,6 +20,6 @@ execute if entity @s[tag=armorsets.conflicting_slots.true] run return 0
 
 tag @s add armorsets.chest_equipped
 
-say put on
+#say put on
 
 function armorsets:functionality/slot_data/refresh_all_minor_slots

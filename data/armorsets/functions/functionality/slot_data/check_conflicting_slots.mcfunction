@@ -9,6 +9,7 @@
 #
 
 
+# Minor items check
 execute if data storage armorsets:data current_set.replacements.head if entity @s[tag=armorsets.head_equipped_minor] run return 1
 
 execute if data storage armorsets:data current_set.replacements.chest if entity @s[tag=armorsets.chest_equipped_minor] run return 1
@@ -16,4 +17,13 @@ execute if data storage armorsets:data current_set.replacements.chest if entity 
 execute if data storage armorsets:data current_set.replacements.legs if entity @s[tag=armorsets.legs_equipped_minor] run return 1
 
 execute if data storage armorsets:data current_set.replacements.feet if entity @s[tag=armorsets.feet_equipped_minor] run return 1
+
+# Major items check
+execute if data storage armorsets:data current_set.replacements.head if entity @s[tag=armorsets.head_equipped] run return 1
+
+execute if data storage armorsets:data current_set.replacements.chest if entity @s[tag=armorsets.chest_equipped] run return 1
+
+execute if data storage armorsets:data current_set.replacements.legs if entity @s[tag=armorsets.legs_equipped] run return 1
+
+execute if data storage armorsets:data current_set.replacements.feet if entity @s[tag=armorsets.feet_equipped] run return 1
 

@@ -10,7 +10,7 @@
 tag @s remove armorsets.chest_equipped
 scoreboard players reset @s armorsets.chestset
 
-say take off
+#say take off
 
 function armorsets:functionality/slot_data/refresh_all_minor_slots
 
