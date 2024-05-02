@@ -1,0 +1,14 @@
+[
+    {
+      "function": "minecraft:reference",
+      "name": "armorsets:item_storage/copy_damage"
+    },
+    {
+      "function": "minecraft:reference",
+      "name": "armorsets:item_storage/copy_armorsets"
+    },
+    {
+      "function": "minecraft:reference",
+      "name": "armorsets:item_storage/copy_display"
+    }
+]

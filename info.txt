@@ -1,0 +1,38 @@
+
+
+Tags:
+
+armorsets.head_equipped
+armorsets.chest_equipped
+armorsets.legs_equipped
+armorsets.feet_equipped
+    (Whether the item in that slot current is the base item)
+
+armorsets.head_equipped_minor
+armorsets.chest_equipped_minor
+armorsets.legs_equipped_minor
+armorsets.feet_equipped_minor
+    (Whether the item in that slot current is a minor item in a set)
+
+
+Armor Set NBT Format:
+
+(Base): armorsets
+{
+    type: STRING ("major" or "minor")
+    set_id: INT (ID of the unique set, to distinguish if swapping with another set)
+    replacements: (Slots and their respective items in the set)
+    {
+        head/chest/legs/feet: (The particular slot)
+        {
+            (item NBT)
+            id: STRING,
+            tag: {...}
+        }
+    }
+}
+
+
+
+
+

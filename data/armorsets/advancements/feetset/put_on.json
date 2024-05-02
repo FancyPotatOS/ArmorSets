@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "armorsets.put_on_feetset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "feet": {
+              "nbt": "{armorsets:{type:\"major\"}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/feetset/put_on"
+  }
+}

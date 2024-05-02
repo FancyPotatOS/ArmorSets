@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "armorsets.put_on_headset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "nbt": "{armorsets:{type:\"major\"}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/headset/put_on"
+  }
+}

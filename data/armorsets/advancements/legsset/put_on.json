@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "armorsets.put_on_legsset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "legs": {
+              "nbt": "{armorsets:{type:\"major\"}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/legsset/put_on"
+  }
+}

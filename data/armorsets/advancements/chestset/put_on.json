@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "armorsets.put_on_chestset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "chest": {
+              "nbt": "{armorsets:{type:\"major\"}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/chestset/put_on"
+  }
+}
