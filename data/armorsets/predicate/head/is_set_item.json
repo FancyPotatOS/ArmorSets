@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "reference",
+      "name": "armorsets:head/is_base"
+    },
+    {
+      "condition": "reference",
+      "name": "armorsets:head/is_minor"
+    }
+  ]
+}

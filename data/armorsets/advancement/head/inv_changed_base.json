@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+              "condition": "minecraft:reference",
+              "name": "armorsets:head/is_base"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/head/inv_changed_base"
+  }
+}

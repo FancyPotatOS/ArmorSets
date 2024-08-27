@@ -1,0 +1,7 @@
+{
+  "condition": "inverted",
+  "term": {
+    "condition": "minecraft:reference",
+    "name": "armorsets:legs/is_set_item"
+  }
+}

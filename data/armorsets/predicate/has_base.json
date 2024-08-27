@@ -1,0 +1,21 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "armorsets:head/is_base"
+        },
+        {
+            "condition": "reference",
+            "name": "armorsets:chest/is_base"
+        },
+        {
+            "condition": "reference",
+            "name": "armorsets:legs/is_base"
+        },
+        {
+            "condition": "reference",
+            "name": "armorsets:feet/is_base"
+        }
+    ]
+}

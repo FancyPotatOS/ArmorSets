@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"armorsets.legs.base\"]}"
+            }
+          },
+          {
+            "condition": "inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "armorsets:legs/is_base"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "armorsets:advancements/legs/inv_changed_no_base"
+  }
+}
