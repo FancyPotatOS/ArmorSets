@@ -15,7 +15,6 @@ data merge storage armorsets:data {armor_sets:{}}
 function armorsets:equipment/minor/clear_tags
 function armorsets:equipment/minor/clear
 
-
 # Check all minor possiblities and store info
 execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.head
 execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.chest

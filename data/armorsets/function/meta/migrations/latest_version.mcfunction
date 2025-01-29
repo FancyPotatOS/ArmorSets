@@ -20,3 +20,5 @@ scoreboard objectives add armorsets.legsset dummy
 scoreboard objectives add armorsets.feetset dummy
 
 
+return 0
+scoreboard objectives add fpconflict.conflict_map dummy

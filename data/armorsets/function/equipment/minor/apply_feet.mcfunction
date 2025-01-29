@@ -10,7 +10,7 @@
 tag @s add armorsets.feet.minor
 
 # Summon an armorstand which we will replace the target slot with
-summon armor_stand ~ ~ ~ {NoAI:1b,Tags:["armorsets.armor_stand.temp"],HandItems:[{id:"minecraft:leather_boots",count:1b},{}]}
+summon armor_stand ~ ~ ~ {NoAI:1b,Tags:["armorsets.armor_stand.temp"],equipment:{mainhand:{id:"minecraft:leather_boots",count:1b}}}
 # @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1]
 
 data remove storage armorsets:data item
@@ -18,7 +18,7 @@ data merge storage armorsets:data {item:{}}
 
 data modify storage armorsets:data item set from storage armorsets:data armor_sets.feet
 
-data modify entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] HandItems[0] set from storage armorsets:data item
+data modify entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] equipment.mainhand set from storage armorsets:data item
 
 item replace entity @s armor.feet from entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] weapon.mainhand
 

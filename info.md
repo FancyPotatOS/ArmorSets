@@ -42,31 +42,32 @@ Here is a give command for an entire spacesuit
 ```
 /give @p minecraft:iron_chestplate
 [
-    minecraft:custom_name='["",{"text":"Spacesuit","italic":false,"color":"dark_purple","bold":true}]',
-    minecraft:lore=[            '["",{"text":"The complete \'Spacesuit\' armorset","color":"gray"}]'        ],
-    minecraft:custom_data= {
+    custom_name=["",{"text":"Spacesuit","italic":false,"color":"dark_purple","bold":true}],
+    lore=[["",{"text":"The complete 'Spacesuit' armorset","color":"gray"}]],
+    custom_data= {
         armorsets: {
             type:"base",
             set_items: {
                 head: {
                     id:"minecraft:glass",
                     components: {
-                        "minecraft:custom_name":'["",{"text":"Helmet","color":"aqua"}]',
-                        "minecraft:lore":['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']
+                        "minecraft:custom_name":["",{"text":"Helmet","color":"aqua"}],
+                        "minecraft:lore":[["",{"text":"Part of the 'Spacesuit'","color":"gray"}]],
+                        "minecraft:equippable":{slot:"head",camera_overlay:"block/glass"}
                     }
                 },
                 legs: {
                     id:"minecraft:iron_leggings",
                     "components": {
-                        "minecraft:custom_name":'["",{"text":"Lower Torse Assembly","color":"aqua"}]',
-                        "minecraft:lore":['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']
+                        "minecraft:custom_name":["",{"text":"Lower Torse Assembly","color":"aqua"}],
+                        "minecraft:lore":[["",{"text":"Part of the 'Spacesuit'","color":"gray"}]]
                     }
                 },
                 feet: {
                     id:"minecraft:iron_boots",
                     "components": {
-                        "minecraft:custom_name":'["",{"text":"Spacesuit Overshoe","color":"aqua"}]',
-                        "minecraft:lore":['["",{"text":"Part of the \'Spacesuit\'","color":"gray"}]']
+                        "minecraft:custom_name":["",{"text":"Spacesuit Overshoe","color":"aqua"}],
+                        "minecraft:lore":[["",{"text":"Part of the 'Spacesuit'","color":"gray"}]]
                     }
                 }
             }
