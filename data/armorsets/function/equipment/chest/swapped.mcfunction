@@ -8,7 +8,7 @@
 
 
 function armorsets:equipment/chest/ensure_set
-execute store result score @s armorsets.chestset run data get entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set
+execute store result score @s armorsets.chestset run data get entity @s equipment.chest.components."minecraft:custom_data".armorsets.set
 
 tag @s add armorsets.chest.except
 function armorsets:equipment/minor/refresh

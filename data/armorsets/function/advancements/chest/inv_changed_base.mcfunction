@@ -11,7 +11,7 @@ advancement revoke @s only armorsets:chest/inv_changed_base
 execute if entity @s[tag=armorsets.advancements.chest.new] run return 0
 
 scoreboard players set temp armorsets.chestset -1
-execute store result score temp armorsets.chestset run data get entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set
+execute store result score temp armorsets.chestset run data get entity @s equipment.chest.components."minecraft:custom_data".armorsets.set
 
 execute if score @s armorsets.chestset = temp armorsets.chestset run return 0
 

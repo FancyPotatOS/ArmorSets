@@ -2,6 +2,6 @@
 	"replace":false,
 	"values":
 	[
-		"armorsets:meta/pre_detect"
+		"armorsets:meta/predetect"
 	]
 }

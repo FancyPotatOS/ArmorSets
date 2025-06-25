@@ -8,7 +8,7 @@
 
 
 function armorsets:equipment/legs/ensure_set
-execute store result score @s armorsets.legsset run data get entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set
+execute store result score @s armorsets.legsset run data get entity @s equipment.legs.components."minecraft:custom_data".armorsets.set
 
 # Resolve if the legs set is conflicting with another
 tag @s remove armorsets.conflicted

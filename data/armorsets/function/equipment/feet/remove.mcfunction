@@ -8,7 +8,7 @@
 
 summon item ~ ~ ~ {Tags:["armorsets.returned_item"],Age:0,Item:{id:"minecraft:dirt",count:1b}}
 
-data modify entity @e[type=item,tag=armorsets.returned_item,limit=1] Item set from entity @s Inventory[{Slot:100b}]
+data modify entity @e[type=item,tag=armorsets.returned_item,limit=1] Item set from entity @s equipment.feet
 
 item modify entity @s armor.feet armorsets:remove_item
 

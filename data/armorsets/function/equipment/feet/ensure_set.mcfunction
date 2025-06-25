@@ -7,7 +7,7 @@
 #
 
 
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:custom_data".armorsets.set run return 0
+execute if data entity @s equipment.feet.components."minecraft:custom_data".armorsets.set run return 0
 
 execute store result storage armorsets:data set int 1 run random value 1..
 

@@ -16,25 +16,25 @@ function armorsets:equipment/minor/clear_tags
 function armorsets:equipment/minor/clear
 
 # Check all minor possiblities and store info
-execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.head
-execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.chest
-execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.legs
-execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set_items.feet
+execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s equipment.head.components."minecraft:custom_data".armorsets.set_items.head
+execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s equipment.head.components."minecraft:custom_data".armorsets.set_items.chest
+execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s equipment.head.components."minecraft:custom_data".armorsets.set_items.legs
+execute unless entity @e[tag=armorsets.head.except] if predicate armorsets:head/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s equipment.head.components."minecraft:custom_data".armorsets.set_items.feet
 
-execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set_items.head
-execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set_items.chest
-execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set_items.legs
-execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s Inventory[{Slot:102b}].components."minecraft:custom_data".armorsets.set_items.feet
+execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s equipment.chest.components."minecraft:custom_data".armorsets.set_items.head
+execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s equipment.chest.components."minecraft:custom_data".armorsets.set_items.chest
+execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s equipment.chest.components."minecraft:custom_data".armorsets.set_items.legs
+execute unless entity @e[tag=armorsets.chest.except] if predicate armorsets:chest/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s equipment.chest.components."minecraft:custom_data".armorsets.set_items.feet
 
-execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set_items.head
-execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set_items.chest
-execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set_items.legs
-execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set_items.feet
+execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s equipment.legs.components."minecraft:custom_data".armorsets.set_items.head
+execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s equipment.legs.components."minecraft:custom_data".armorsets.set_items.chest
+execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s equipment.legs.components."minecraft:custom_data".armorsets.set_items.legs
+execute unless entity @e[tag=armorsets.legs.except] if predicate armorsets:legs/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s equipment.legs.components."minecraft:custom_data".armorsets.set_items.feet
 
-execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s Inventory[{Slot:100b}].components."minecraft:custom_data".armorsets.set_items.head
-execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s Inventory[{Slot:100b}].components."minecraft:custom_data".armorsets.set_items.chest
-execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s Inventory[{Slot:100b}].components."minecraft:custom_data".armorsets.set_items.legs
-execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s Inventory[{Slot:100b}].components."minecraft:custom_data".armorsets.set_items.feet
+execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_head run data modify storage armorsets:data armor_sets.head set from entity @s equipment.feet.components."minecraft:custom_data".armorsets.set_items.head
+execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_chest run data modify storage armorsets:data armor_sets.chest set from entity @s equipment.feet.components."minecraft:custom_data".armorsets.set_items.chest
+execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_legs run data modify storage armorsets:data armor_sets.legs set from entity @s equipment.feet.components."minecraft:custom_data".armorsets.set_items.legs
+execute unless entity @e[tag=armorsets.feet.except] if predicate armorsets:feet/has_minor_feet run data modify storage armorsets:data armor_sets.feet set from entity @s equipment.feet.components."minecraft:custom_data".armorsets.set_items.feet
 
 
 # Apply gathered minor information

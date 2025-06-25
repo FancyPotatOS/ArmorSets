@@ -11,7 +11,7 @@ advancement revoke @s only armorsets:head/inv_changed_base
 execute if entity @s[tag=armorsets.advancements.head.new] run return 0
 
 scoreboard players set temp armorsets.headset -1
-execute store result score temp armorsets.headset run data get entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set
+execute store result score temp armorsets.headset run data get entity @s equipment.head.components."minecraft:custom_data".armorsets.set
 
 execute if score @s armorsets.headset = temp armorsets.headset run return 0
 

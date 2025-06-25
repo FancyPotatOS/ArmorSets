@@ -11,7 +11,7 @@ advancement revoke @s only armorsets:legs/inv_changed_base
 execute if entity @s[tag=armorsets.advancements.legs.new] run return 0
 
 scoreboard players set temp armorsets.legsset -1
-execute store result score temp armorsets.legsset run data get entity @s Inventory[{Slot:101b}].components."minecraft:custom_data".armorsets.set
+execute store result score temp armorsets.legsset run data get entity @s equipment.legs.components."minecraft:custom_data".armorsets.set
 
 execute if score @s armorsets.legsset = temp armorsets.legsset run return 0
 

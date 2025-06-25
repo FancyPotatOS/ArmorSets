@@ -8,7 +8,7 @@
 
 
 function armorsets:equipment/head/ensure_set
-execute store result score @s armorsets.headset run data get entity @s Inventory[{Slot:103b}].components."minecraft:custom_data".armorsets.set
+execute store result score @s armorsets.headset run data get entity @s equipment.head.components."minecraft:custom_data".armorsets.set
 
 tag @s add armorsets.head.except
 function armorsets:equipment/minor/refresh

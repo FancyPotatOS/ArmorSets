@@ -22,10 +22,10 @@ data modify entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] e
 
 item replace entity @s armor.chest from entity @e[type=armor_stand,tag=armorsets.armor_stand.temp,limit=1] weapon.mainhand
 
-item modify entity @s armor.chest armorsets:hide_enchantment_info
 execute unless data storage armorsets:data item{binding:0b} run item modify entity @s armor.chest armorsets:add_binding
 execute unless data storage armorsets:data item{vanishing:0b} run item modify entity @s armor.chest armorsets:add_vanishing
 execute unless data storage armorsets:data item{unbreakable:0b} run item modify entity @s armor.chest armorsets:add_unbreakable
+execute if data storage armorsets:data item{unbreakable:0b} run item modify entity @s armor.chest armorsets:hide_enchantment_info
 
 item modify entity @s armor.chest armorsets:flag_minor
 
