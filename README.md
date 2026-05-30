@@ -2,7 +2,7 @@
 
 ## Minecraft Armor Sets Datapack
 
-<b>Now updated to 1.21.5</b>
+<b>Compatible with 26.1.2</b>
 
 Inspired by [JayMan146](https://youtube.com/@jayman1462?si=dF_tUg8xtduzIdqC)'s datapack.
 
